@@ -24,6 +24,8 @@ class fibonacci(object):
             return 1
         else:
             nthFib = self.fib(n - 1) + self.fib(n - 2)
+            if n - 2 > 1:
+                del self.numbers[n - 2]
             self.setNth(n, nthFib)
             return nthFib
 
@@ -37,8 +39,9 @@ if __name__ == '__main__':
     f = fibonacci()
     startT = time.time()
     for i in range(n):
-        #print f.fib(i),
         f.fib(i)
+        if i == n-1:
+            print f.fib(i)
     endT = time.time()
     t = endT - startT
     print 'generated all the fibonacci numbers up to', n, '- this took', t, 'seconds'
