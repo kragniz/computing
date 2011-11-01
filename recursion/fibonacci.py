@@ -6,7 +6,7 @@ class fibonacci(object):
         self.numbers = {}
 
     def getNth(self, n):
-        if self.numbers.has_key(n):
+        if n in self.numbers:
             return self.numbers[n]
         else:
             return False
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     f = fibonacci()
     startT = time.time()
     for i in range(n):
-        f.fib(i)
+        print f.fib(i)
         if i == n-1:
             print f.fib(i)
     endT = time.time()
