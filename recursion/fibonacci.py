@@ -6,10 +6,7 @@ class fibonacci(object):
         self.numbers = {}
 
     def getNth(self, n):
-        if n in self.numbers:
-            return self.numbers[n]
-        else:
-            return False
+        return self.numbers.get(n)
 
     def setNth(self, n, v):
         self.numbers[n] = v
