@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys
+import sys, time
 
 class fibonacci(object):
     def __init__(self):
@@ -35,5 +35,10 @@ if __name__ == '__main__':
         n = 10
 
     f = fibonacci()
+    startT = time.time()
     for i in range(n):
-        print f.fib(i),
+        #print f.fib(i),
+        f.fib(i)
+    endT = time.time()
+    t = endT - startT
+    print 'generated all the fibonacci numbers up to', n, '- this took', t, 'seconds'
