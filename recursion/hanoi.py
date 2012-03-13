@@ -15,6 +15,7 @@ class hanoi(object):
     def move(self, n):
 
 
+
 if __name__ == '__main__':
     h = hanoi(10)
     print h
