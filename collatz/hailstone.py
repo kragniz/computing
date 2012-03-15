@@ -12,7 +12,10 @@ def collatz(x):
     return i
 
 if __name__ == '__main__':
-    i = int(sys.argv[1])
+    if len(sys.argv) > 1:
+        i = int(sys.argv[1])
+    else:
+        i = 1
     high = 0
     highesti = 0
     try:
